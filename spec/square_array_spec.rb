@@ -6,12 +6,14 @@ describe '#square_array' do
     expect(numbers).to_not receive(:map)
     expect(numbers).to_not receive(:inject)
     square_array(numbers)
+    return.each
   end
 
   it 'calls on each' do
     numbers = [1,2,3]
     expect(numbers).to receive(:each)
     square_array(numbers)
+    return.each
   end
 
   it 'should square the elements in an array' do
